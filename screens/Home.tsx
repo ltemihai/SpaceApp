@@ -5,6 +5,12 @@ import Header from "../components/header/Header";
 import AppList from "../components/list/List";
 
 export default class HomeScreen extends Component {
+
+    static navigationOptions = {
+        title: 'Home',
+        /* No more header config here! */
+    };
+
     render() {
         return (
             <Fragment>
@@ -14,9 +20,6 @@ export default class HomeScreen extends Component {
                         contentInsetAdjustmentBehavior="automatic"
                         style={styles.scrollView}>
                         <View>
-                            <Header title={statusBar.title} barStyle={statusBar.barStyle} color={statusBar.color}>
-
-                            </Header>
                             <AppList entries={entities}>
 
                             </AppList>

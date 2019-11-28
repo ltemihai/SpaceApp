@@ -7,7 +7,7 @@ import {PrimaryNav} from "./navigation/PrimaryNav";
 const AppContainer = createAppContainer(PrimaryNav);
 
 export default class App extends Component {
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    render() {
         return <AppContainer>
 
         </AppContainer>
