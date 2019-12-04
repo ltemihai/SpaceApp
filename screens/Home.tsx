@@ -1,8 +1,8 @@
 import React, {Component, Fragment} from "react";
 import {SafeAreaView, ScrollView, StatusBar, StyleSheet, View} from "react-native";
 import {Colors} from "react-native/Libraries/NewAppScreen";
-import Header from "../components/header/Header";
 import AppList from "../components/list/List";
+import {Planet} from "../models/Planet";
 
 export default class HomeScreen extends Component {
 
@@ -20,7 +20,7 @@ export default class HomeScreen extends Component {
                         contentInsetAdjustmentBehavior="automatic"
                         style={styles.scrollView}>
                         <View>
-                            <AppList entries={entities}>
+                            <AppList entries={entities} navigation={this.props.navigation}>
 
                             </AppList>
                         </View>
@@ -35,11 +35,7 @@ export default class HomeScreen extends Component {
 }
 
 
-const statusBar = {
-    title: 'SpaceApp',
-    barStyle: 'light-content',
-    color: 'red'
-}
+
 
 const styles = StyleSheet.create({
     scrollView: {
@@ -80,10 +76,10 @@ const styles = StyleSheet.create({
     },
 });
 
-const entities = [
+const entities: Planet[] = [
     {
         id: 1,
-        title: 'Woooooohoh',
+        title: 'Wooohoh',
         uri: require('./../assets/earth.png'),
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum faucibus hendrerit. Aenean finibus, nisl ut tempor pretium, lorem velit consequat arcu, id finibus odio orci sed dolor. Fusce bibendum ornare lorem, ut consequat nisi egestas ut. Praesent pretium felis ante, nec suscipit nisi vehicula non.'
     },{
